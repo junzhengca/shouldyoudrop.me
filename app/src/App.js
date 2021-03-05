@@ -39,7 +39,7 @@ function App() {
     let finalGrade = 0; // Grade received on finalized weight
     for (const [, gradingItem] of Object.entries(gradingItems)) {
       if (gradingItem.isFinal) {
-        finalWeight += gradingItem.weight;
+        finalWeight += new Number(gradingItem.weight);
         finalGrade += gradingItem.grade / 100 * gradingItem.weight;
       }
     }
@@ -50,7 +50,7 @@ function App() {
     let currentWeight = 0;
     let currentGrade = 0;
     for (const [, gradingItem] of Object.entries(gradingItems)) {
-      currentWeight += gradingItem.weight;
+      currentWeight += new Number(gradingItem.weight);
       currentGrade += gradingItem.grade / 100 * gradingItem.weight;
     }
     return [currentGrade, currentWeight];
