@@ -44,3 +44,6 @@ RUN apt install -y python3-pip
 
 # Install Golang
 RUN apt update && apt install -y golang
+
+# Install proto3
+RUN apt update && apt install -y protobuf-compiler
